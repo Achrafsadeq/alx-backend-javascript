@@ -1,4 +1,3 @@
-/* Using let for block-scoping to prevent variable overwriting */
 export default function taskBlock(trueOrFalse) {
   let task = false;
   let task2 = true;
