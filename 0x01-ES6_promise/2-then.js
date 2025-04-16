@@ -1,9 +1,3 @@
-/**
- * Handles a promise and returns structured response.
- *
- * @param {Promise} promise - The API promise to handle
- * @returns {Promise} A promise that resolves with a status object or an Error
- */
 export default function handleResponseFromAPI(promise) {
   return promise
     .then(() => {
