@@ -21,32 +21,32 @@ export default class ALXCourse {
     return this._name;
   }
 
-  set name(na) {
-    if (typeof na !== 'string') {
+  set name(n) {
+    if (typeof n !== 'string') {
       throw new TypeError('Name must be a string');
     }
-    this._name = na;
+    this._name = n;
   }
 
   get length() {
     return this._length;
   }
 
-  set length(zise) {
-    if (typeof zise !== 'number') {
+  set length(size) {
+    if (typeof size !== 'number') {
       throw new TypeError('Length must be a number');
     }
-    this._length = zise;
+    this._length = size;
   }
 
   get students() {
     return this._students;
   }
 
-  set students(stu) {
-    if (!Array.isArray(stu)) {
+  set students(st) {
+    if (!Array.isArray(st)) {
       throw new TypeError('must be a array');
     }
-    this._students = stu;
+    this._students = st;
   }
 }
