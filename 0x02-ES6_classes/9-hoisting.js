@@ -1,38 +1,40 @@
+// Move class definitions to the top to fix hoisting issues
 export class ALXClass {
-  constructor(year, location) {
-    this._year = year;
-    this._location = location;
-  }
+    constructor(year, location) {
+        this._year = year;
+        this._location = location;
+    }
 
-  get year() {
-    return this._year;
-  }
+    get year() {
+        return this._year;
+    }
 
-  get location() {
-    return this._location;
-  }
+    get location() {
+        return this._location;
+    }
 }
 
 export class StudentALX {
-  constructor(firstName, lastName, alxClass) {
-    this._firstName = firstName;
-    this._lastName = lastName;
-    this._alxClass = alxClass;
-  }
+    constructor(firstName, lastName, alxClass) {
+        this._firstName = firstName;
+        this._lastName = lastName;
+        this._alxClass = alxClass;
+    }
 
-  get fullName() {
-    return `${this._firstName} ${this._lastName}`;
-  }
+    get fullName() {
+        return `${this._firstName} ${this._lastName}`;
+    }
 
-  get alxClass() {
-    return this._alxClass;
-  }
+    get alxClass() {
+        return this._alxClass;
+    }
 
-  get fullStudentDescription() {
-    return `${this._firstName} ${this._lastName} - ${this._alxClass.year} - ${this._alxClass.location}`;
-  }
+    get fullStudentDescription() {
+        return `${this._firstName} ${this._lastName} - ${this._alxClass.year} - ${this._alxClass.location}`;
+    }
 }
 
+// Create instances after class definitions
 const class2019 = new ALXClass(2019, 'San Francisco');
 const class2020 = new ALXClass(2020, 'San Francisco');
 
@@ -42,4 +44,4 @@ const student3 = new StudentALX('Albert', 'Clinton', class2019);
 const student4 = new StudentALX('Donald', 'Bush', class2019);
 const student5 = new StudentALX('Jason', 'Sandler', class2019);
 
-export default [student1, student2, student3, student4, student5];
+export const listOfStudents = [student1, student2, student3, student4, student5];
