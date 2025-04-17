@@ -8,7 +8,6 @@ export default class EVCar extends Car {
   }
 
   cloneCar() {
-    // FIX: Call Car directly instead of using `this._brand` etc.
     return new Car(this._brand, this._motor, this._color);
   }
 }
