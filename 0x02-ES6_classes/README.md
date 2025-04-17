@@ -34,8 +34,6 @@ sudo apt install nodejs -y
 ```bash
 npm install
 ```
-
-
 ## Project Tasks
 
 | **Task** | **Description** | **File** |
