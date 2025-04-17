@@ -21,11 +21,11 @@ export default class ALXCourse {
     return this._name;
   }
 
-  set name(n) {
-    if (typeof n !== 'string') {
+  set name(na) {
+    if (typeof na !== 'string') {
       throw new TypeError('Name must be a string');
     }
-    this._name = n;
+    this._name = na;
   }
 
   get length() {
@@ -43,10 +43,10 @@ export default class ALXCourse {
     return this._students;
   }
 
-  set students(s) {
+  set students(stu) {
     if (!Array.isArray(stu)) {
       throw new TypeError('must be a array');
     }
-    this._students = s;
+    this._students = stu;
   }
 }
