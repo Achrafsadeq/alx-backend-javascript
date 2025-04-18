@@ -1,4 +1,3 @@
-// Define the ALXClass
 export class ALXClass {
   constructor(year, location) {
     this._year = year;
