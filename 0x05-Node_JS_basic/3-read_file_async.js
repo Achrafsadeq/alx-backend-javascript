@@ -2,7 +2,7 @@ const fs = require('fs');
 
 /**
  * Asynchronously processes a CSV database file containing student records.
- * Analyzes enrollment data by academic field and outputs statistical information.
+ * @param {string} dbPath - The file system path to the student database CSV file.
  * @returns {Promise} A promise that resolves after successfully processing student data.
  */
 function countStudents(dbPath) {
@@ -14,8 +14,7 @@ function countStudents(dbPath) {
         const fieldRegistry = new Map();
         let enrollmentRecords = data.split('\n');
         enrollmentRecords = enrollmentRecords.slice(1, enrollmentRecords.length - 1);
-        
-        // Process each enrollment record and organize students by their academic discipline
+
         enrollmentRecords.forEach((record) => {
           const recordFields = record.split(',');
           const studentName = recordFields[0];
@@ -26,8 +25,7 @@ function countStudents(dbPath) {
             fieldRegistry.set(academicField, [studentName]);
           }
         });
-        
-        // Output enrollment statistics and student distribution across disciplines
+
         console.log(`Number of students: ${enrollmentRecords.length}`);
         fieldRegistry.forEach((studentsInField, fieldName) => {
           console.log(`Number of students in ${fieldName}: ${studentsInField.length}. List: ${studentsInField.join(', ')}`);
