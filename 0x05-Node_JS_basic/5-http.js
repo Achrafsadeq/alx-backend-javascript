@@ -7,18 +7,16 @@ const app = http.createServer(async (req, res) => {
     res.setHeader('Content-Type', 'text/plain');
     res.end('Hello Holberton School!');
   } else if (req.url === '/students') {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.write('This is the list of our students\n');
+
     try {
-      res.statusCode = 200;
-      res.setHeader('Content-Type', 'text/plain');
-      res.write('This is the list of our students\n');
-      await countStudents(process.argv[2])
-        .then(() => {})
-        .catch((err) => {
-          res.end(err.message);
-        });
+      await countStudents(process.argv[2]);
+      res.end();
     } catch (err) {
       res.statusCode = 500;
-      res.end('Cannot load the database');
+      res.end(err.message);
     }
   }
 });
