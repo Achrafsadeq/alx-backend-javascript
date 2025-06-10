@@ -11,7 +11,7 @@ function countStudents(dbPath) {
     students = students.split('\n');
     students = students.slice(1, students.length - 1);
     const courses = new Map();
-    
+
     // Iterate through student records to build field-based enrollment tracking
     students.forEach((student) => {
       const studentData = student.split(',');
@@ -24,7 +24,7 @@ function countStudents(dbPath) {
         courses.set(field, { students: [firstName], count: 1 });
       }
     });
-    
+
     // Output comprehensive enrollment statistics to console
     console.log(`Number of students: ${students.length}`);
     courses.forEach((courseData, course) => {
