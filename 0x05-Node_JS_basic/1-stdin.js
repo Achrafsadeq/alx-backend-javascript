@@ -1,13 +1,11 @@
-#!/usr/bin/env node
-
 console.log('Welcome to ALX, what is your name?');
 
-process.stdin.setEncoding('utf8');
+process.stdin.setEncoding('utf-8');
 
 process.stdin.on('readable', () => {
-  const chunk = process.stdin.read();
-  if (chunk !== null) {
-    process.stdout.write(`Your name is: ${chunk}`);
+  const name = process.stdin.read();
+  if (name !== null) {
+    process.stdout.write(`Your name is: ${name}`);
   }
 });
 
