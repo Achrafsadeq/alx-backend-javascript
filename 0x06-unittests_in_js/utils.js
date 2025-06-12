@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+class Utils {
 /**
  * calculateNumber - performs mathematical operations on two rounded numbers
  * @param {string} type - the operation type: 'SUM', 'SUBTRACT', or 'DIVIDE'
@@ -8,14 +9,15 @@
  * @returns {number|string} the result of the operation, or 'Error' for division by zero
  */
 
-static calculateNumber(type, a, b) {
-  const operands = {
-    SUM: (a, b) => a + b,
-    SUBTRACT: (a, b) => a - b,
-    DIVIDE: (a, b) => (b !== 0 ? a / b : 'Error'),
-  };
+  static calculateNumber(type, a, b) {
+    const operands = {
+      SUM: (a, b) => a + b,
+      SUBTRACT: (a, b) => a - b,
+      DIVIDE: (a, b) => (b !== 0 ? a / b : 'Error'),
+    };
 
-  return operands[type](Math.round(a), Math.round(b));
+    return operands[type](Math.round(a), Math.round(b));
+  }
 }
 
 module.exports = Utils;
