@@ -1,21 +1,20 @@
 {
   "name": "0x06-unittests_in_js",
   "version": "1.0.0",
-  "description": "## Description This project focuses on learning unit testing in JavaScript using Mocha, Chai, and Sinon libraries.",
-  "main": "0-calcul.js",
+  "description": "Unit testing in JavaScript with Mocha, Chai, and Sinon",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^5.2.0",
-    "mocha": "^11.6.0",
-    "sinon": "^20.0.0"
+    "mocha": "^6.2.2",
+    "chai": "^4.2.0",
+    "sinon": "^7.5.0",
+    "request": "^2.88.0"
   },
   "dependencies": {
-    "express": "^5.1.0",
-    "request": "^2.88.2"
+    "express": "^4.17.1"
   }
 }
